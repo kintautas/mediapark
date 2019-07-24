@@ -1,0 +1,29 @@
+<div id="container">
+    <mat-card id="card">
+      <mat-card-header>
+        <mat-card-title>Add item</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="myForm"  id="content">
+          <mat-form-field>
+            <input [(ngModel)]="product" matInput placeholder="Product name"  formControlName="product">
+            <mat-error>{{getErrorMessageProduct()}}</mat-error>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <input [(ngModel)]="price" type="price" matInput placeholder="Product price"  formControlName="price">
+            <mat-error>{{getErrorMessagePrice()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input [(ngModel)]="quantity" type="quantity" matInput placeholder="Product quantity"  formControlName="quantity">
+            <mat-error>{{getErrorMessageQuantity()}}</mat-error>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button [disabled]="!myForm.valid" (click)="add()" mat-button>ADD</button>
+        <button (click)="close()" mat-button>CLOSE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

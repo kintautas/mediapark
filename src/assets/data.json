@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "product": "pizza",
+        "price": 3,
+        "quantity": 1
+    },
+    {
+        "id": 2,
+        "product": "banana",
+        "price": 1,
+        "quantity": 10
+    },
+    {
+        "id": 3,
+        "product": "chocolate",
+        "price": 1.5,
+        "quantity": 2
+    }
+]
